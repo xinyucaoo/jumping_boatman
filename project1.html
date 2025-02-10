@@ -1,0 +1,52 @@
+<!-- Last edited by Dietrich Geisler 2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+    <!-- Sets an icon for the page -->
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.ico">
+</header>
+
+<body onload="main()" onkeydown="if(event.code === 'Space') jump()">
+    <!-- WebGL Utility Scripts -->
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix-quat03.js"></script>
+    
+    <!-- Select a JavaScript file -->
+    <script src="project1.js"></script>
+
+    <!-- Setup the Canvas -->
+    <canvas id="canvas" width="400" height="400">
+        Please use a browser that supports "canvas"
+    </canvas>    
+
+    <!-- Buttons -->
+    <p>
+        <input type="button" onclick="jump()" value="Jump!">
+    </p>
+    <p>
+        <input type="button" onclick="setOrthographic()" value="Orthographic">
+    </p>
+    <p>
+        <input type="button" onclick="setPerspective()" value="Perspective">
+    </p>
+
+    <!-- Add camera controls -->
+    <div>
+        <input type="range" id="sliderX" min="-2" max="2" step=".01" />
+        <label id="cameraX" for="sliderX"></label>
+    </div>
+    <div>
+        <input type="range" id="sliderY" min="-2" max="2" step=".01" />
+        <label id="cameraY" for="sliderY"></label>
+    </div>
+    <div>
+        <input type="range" id="sliderZ" min="-2" max="2" step=".01" />
+        <label id="cameraZ" for="sliderZ"></label>
+    </div>
+</body>
+
+</html>
